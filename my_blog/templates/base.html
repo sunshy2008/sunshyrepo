@@ -24,7 +24,7 @@
                         <a class="button-success pure-button" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="button-success pure-button" href="/">Archive</a>
+                        <a class="button-success pure-button" href="{% url 'archives' %}">Archive</a>
                     </li>
                     <li class="nav-item">
                         <a class="pure-button" href="https://github.com/Andrew-liu/my_blog_tutorial">Github</a>
@@ -35,8 +35,16 @@
                     <li class="nav-item">
                         <a class="button-success pure-button" href="/">Pages</a>
                     </li>
+                    <li>
+                    <form class="pure-form" action="/search/" method="get">
+                    <input class="pure-input-3-3" type="text" name="s" placeholder="search">
+                    </form>
+                    </li>
                     <li class="nav-item">
-                        <a class="button-success pure-button" href="/">About Me</a>
+                        <a class="button-success pure-button" href="{% url 'about_me' %}">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="{% url "RSS" %}">RSS</a>  
                     </li>
                 </ul>
             </nav>
